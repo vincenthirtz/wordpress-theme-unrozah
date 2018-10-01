@@ -1,0 +1,427 @@
+/*
+Theme Name: Unrozah Theme
+Theme URI: http://www.unrozah.fr/
+Description: Awesome Unrozah Theme
+Version: 0.1
+Author: Vincent Hirtz
+*/
+
+body {
+    background-color: #160016;
+    font-family: uni, Courier, monospace;
+    color: #ffffff;
+    margin: 0;
+    min-width: 320px;
+}
+
+.background {
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+@media (min-width:480px) and (min-height:480px) {
+    #bg_1 { background-image: url("css/img/starfieldA.png") }
+    #bg_2 { background-image: url("css/img/starfieldB.png") }
+    #bg_3 { background-image: url("css/img/starfieldC.png") }
+}
+
+/* Headers */
+
+#banner { width: 100%; opacity: 0.8;}
+
+.navbarlist {
+    margin: auto;
+    display: table;
+    padding: 0;
+}
+
+.navbaritem { display: table-cell }
+
+.navbaritem a {
+    padding: 21px 30px 29px 30px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* Networks */
+
+.networks a { padding: 21px 25px 29px 25px }
+
+.networks a:hover {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.networks img {
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* IE */
+    transition: all 0.3s;
+    min-width: 0;
+}
+
+.networks img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* IE */
+
+}
+
+@media (max-width: 979px) {
+    .networks a { padding: 21px 12px 29px 12px }
+    .networks img { width: 100% }
+}
+
+@media (max-width: 479px) {
+    .networks a { padding: 21px 1px 29px 1px }
+    .networks { padding: 0 }
+}
+
+
+/* Nav */
+
+nav {
+    background-color: #011F2C;
+    margin-top: -4px;
+}
+
+nav .navbaritem a, #mobile_menu {
+    padding: 9px 30px 11px 30px;
+    font-size: 24px;
+}
+
+.ontop {
+    position: fixed;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+#toShow { display: none }
+
+@media (max-width: 979px) {
+    nav .navbaritem { display: inline }
+}
+
+/* Contenu */
+
+.container {
+    background-color: #011F2C;
+    opacity: 1;
+    padding: 12px 0;
+    margin: 100px auto;
+    max-width: 680px;
+}
+
+.content img.fullwidth {
+    width: 100%;
+    height: auto;
+    margin: 0px 0;
+}
+
+.content h2, .content p, .content form, .content .subcontainer {
+    text-indent: 0px;
+    margin: auto;
+    font-weight: normal;
+    padding: 20px 10px;
+    width: 1150px;
+    height: auto;
+}
+
+.content h2 {
+    font-size: 34px;
+    color: #FF422E;
+}
+
+/*.content p { font-size: 12pt }*/
+.content p {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-indent: 0px;
+}
+
+/* Gallery */
+
+.thumblist {
+    list-style: none;
+    padding: 0;
+    text-indent: 0;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+}
+
+@media (max-width:479px) {
+    .thumblist {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+
+.thumbnail {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.thumblist a {
+    position: relative;
+    cursor: pointer;
+}
+
+.thumblist a:hover {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.caption {
+    position: absolute;
+    float: left;
+    bottom: 16px;
+    z-index: 1;
+    opacity: 0.0;
+    transition: all 0.2s;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #FFF;
+    border-top: 1px solid #000;
+}
+
+a:hover .thumbnail, a:hover .caption {
+    opacity: 1.0;
+}
+
+
+/* Player */
+
+#yt_player_wrapper { /* Fluid size YT iframe */
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+#yt_player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Liens */
+
+a {
+    /*color: #5AB;*/
+    color: #FF422E;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+a:hover, #mobile_menu:focus {
+    /*color: #4DF;*/
+    color: #ff8c80;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* Pied de page */
+
+footer {
+    background-color: #000;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 14pt;
+}
+
+/* Overlay */
+
+#overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 10;
+    display: none;
+}
+
+#close_overlay {
+    height: 100vh;
+    display: block;
+    text-align: center;
+}
+
+#close_overlay:hover {
+    margin: 0;
+    cursor: pointer;
+}
+
+.frameWrapper {
+    height: 80vh;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+.frame {
+    border: 3px solid #5AB;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#img_fullsize {
+    height: 100%;
+    width: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: block;
+    margin: auto;
+}
+
+#overlay .caption {
+    padding-left: 40px;
+    padding-right: 20px;
+    margin: auto;
+    border-right: 1px solid #000;
+}
+
+/* Layout */
+
+* {
+    box-sizing: border-box; /* pour maîtriser width et flex-basis */
+}
+
+html {
+    display: flex; flex-direction: column; /* correction bug IE de min-height non appliqué à body */
+}
+
+body {
+    display: flex; /* crée un contexte flex pour ses enfants */
+    flex-direction: column; /* affichage vertical */
+    min-height: 100vh; /* toute la hauteur du viewport */
+}
+
+.wrapper {
+    flex: 1 1 auto; /* occupe la hauteur restante */
+    display: flex; /* crée un contexte flex pour ses enfants */
+}
+
+aside {
+    width: 10em;
+    background-color: #011F2C;
+    opacity: 1;
+    padding: 12px 0;
+    max-width: 680px;
+    width: 450px;
+}
+
+article {
+    flex: 1; /* occupe la largeur restante */
+    background-color: #011F2C;
+    opacity: 1;
+    padding: 12px 0;
+
+ 
+}
+
+
+
+/* Responsive (fenêtres de moins de 640px) */
+
+@media (max-width: 640px) {
+    .wrapper {
+        flex-direction: column; /* affichage vertical */
+    }
+    aside {
+        width: auto; /* pour écraser la valeur 10em */
+    }
+    aside,
+    article {
+        flex-basis: auto; /* pour écraser la valeur 0, due au flex: 1 */
+    }
+}
+
+/* Decoration */
+
+body {
+    margin: 0;
+    font-family: arial, sans-serif;
+}
+header,
+aside,
+article,
+footer {
+    margin: .4em;
+    padding: 1em;
+    border-radius: 6px;
+}
+
+.articles{
+    width: 100%;
+    height: auto;
+}
+
+.miniature{
+    float: left;
+    width: 150px;
+    margin: 5px;
+}
+
+.containersmall {
+    background-color: #011F2C;
+    opacity: 1;
+    padding: 12px 0;
+    margin: 100px auto;
+    max-width: 680px;
+}
+
+.content2 img.fullwidth {
+    width: 100%;
+    height: auto;
+    margin: 0px 0;
+}
+
+.content2 h2, .content2 p, .content2 form, .content2 .subcontainer {
+    text-indent: 0px;
+    margin: auto;
+    font-weight: normal;
+    padding: 10px 10px;
+    max-width: 680px;
+    height: auto;
+}
+
+.content2 h2 {
+    font-size: 34px;
+    color: #FF422E;
+}
+
+.content2 p {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-indent: 0px;
+}
